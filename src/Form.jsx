@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const Form = () => {
-	const [color, setColor] = useState('');
+	const [color, setColor] = useState('#f15025');
 	const handleSubmit = (e) => {};
 	return (
 		<section className="container">
@@ -10,6 +10,13 @@ const Form = () => {
 				className="color-form"
 				onSubmit={handleSubmit}
 			>
+				<input
+					type="color"
+					value={color}
+					onChange={(e) => {
+						setColor(e.target.value);
+					}}
+				/>
 				<input
 					type="text"
 					value={color}
